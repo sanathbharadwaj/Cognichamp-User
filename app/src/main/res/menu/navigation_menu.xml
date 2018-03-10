@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/my_profile"
+        android:title="@string/my_profile"
+        android:icon="@drawable/ic_account_box_black_24dp"/>
+
+    <item android:id="@+id/notification_history"
+        android:title="@string/notification_history"
+        android:icon="@drawable/ic_notifications_black_24dp"/>
+
+    <item android:title="@string/track_driver"
+        android:id="@+id/track_driver_menu"
+        android:icon="@drawable/ic_directions_car_black_24dp"/>
+
+    <item android:id="@+id/share_app"
+        android:title="@string/share_app"
+        android:icon="@drawable/ic_share_black_24dp"/>
+
+    <item
+        android:id="@+id/edit_pickup_location"
+        android:icon="@drawable/ic_edit_location_black_24dp"
+        android:title="@string/edit_pickup_location" />
+
+    <item android:id="@+id/logout"
+        android:title="@string/log_out"
+        android:icon="@drawable/ic_logout_black_24dp"/>
+
+</menu>
