@@ -10,7 +10,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.anekvurna.userapp.ProfileBasicActivity">
+        tools:context="com.anekvurna.cognichamp.ProfileBasicActivity">
 
         <EditText
             android:id="@+id/profile_name"
@@ -19,9 +19,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:drawableLeft="@drawable/ic_account_box_black_24dp"
             android:drawablePadding="8dp"
-            android:drawableStart="@drawable/ic_account_box_black_24dp"
             android:ems="10"
             android:hint="@string/name_hint"
             android:inputType="textPersonName"
@@ -37,7 +35,6 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:drawableLeft="@drawable/ic_email_black_24dp"
             android:drawablePadding="8dp"
             android:ems="10"
             android:hint="@string/email_hint"
@@ -55,7 +52,6 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:drawableLeft="@drawable/ic_call_black_24dp"
             android:drawablePadding="8dp"
             android:ems="10"
             android:hint="@string/alternate_phone_hint"
@@ -72,7 +68,6 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="8dp"
-            android:drawableLeft="@drawable/ic_office_telephone"
             android:drawablePadding="8dp"
             android:ems="10"
             android:hint="@string/landline_hint"
@@ -80,7 +75,8 @@
             android:maxLength="8"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_alternate_mobile" />
+            app:layout_constraintTop_toBottomOf="@+id/profile_alternate_mobile"
+            android:layout_marginRight="8dp" />
 
 
         <Button
@@ -92,7 +88,8 @@
             android:onClick="onSaveBasic"
             android:text="Save and next"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_landline" />
+            app:layout_constraintTop_toBottomOf="@+id/profile_landline"
+            android:layout_marginRight="8dp" />
 
         <EditText
             android:id="@+id/profile_std_code"
@@ -101,7 +98,6 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:drawableLeft="@drawable/ic_office_telephone"
             android:drawablePadding="8dp"
             android:ems="10"
             android:hint="@string/std_code"
@@ -116,12 +112,11 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="@string/personal_details"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

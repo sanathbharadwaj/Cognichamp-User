@@ -119,7 +119,8 @@
     <string name="driver_phone_number">Driver phone number</string>
     <string name="track_driver">Track Driver</string>
     <string name="share_app">Share App</string>
-    <string name="package_name">com.anekvurna.userapp</string>
+    <string name="package_name">com.anekvurna.cognichamp</string>
     <string name="my_profile">My Profile</string>
     <string name="edit_pickup_location">Edit Pickup Location</string>
+    <string name="empty_dash">---</string>
 </resources>

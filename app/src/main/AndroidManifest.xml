@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.anekvurna.userapp">
+    package="com.anekvurna.cognichamp">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -18,14 +18,8 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
-    <permission
-        android:name="com.anekvurna.userapp.permission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
-
-    <uses-permission android:name="com.anekvurna.userapp.permission.C2D_MESSAGE" />
-
     <application
-        android:name=".UserApp"
+        android:name="com.anekvurna.cognichamp.UserApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -46,49 +40,24 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
-            android:label="@string/app_name" />
+            android:name="com.anekvurna.cognichamp.MapsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
-        <service android:name="com.parse.PushService" />
 
-        <receiver
-            android:name=".PushReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.parse.push.intent.RECEIVE" />
-                <action android:name="com.parse.push.intent.DELETE" />
-                <action android:name="com.parse.push.intent.OPEN" />
-            </intent-filter>
-        </receiver>
-        <receiver
-            android:name="com.parse.GcmBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-
-                <!-- IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
-                <category android:name="com.anekvurna.userapp" />
-            </intent-filter>
-        </receiver>
-
-        <!-- IMPORTANT: Change "YOUR_SENDER_ID" to your GCM Sender Id. -->
-        <meta-data
-            android:name="com.parse.push.gcm_sender_id"
-            android:value="id:166216835986" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
         <service
-            android:name=".MyNotificationService">
+            android:name="com.anekvurna.cognichamp.MyNotificationService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
 
         <service
-            android:name=".MyFirebaseInstanceIDService">
+            android:name="com.anekvurna.cognichamp.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
@@ -110,31 +79,33 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".UserChoiceActivity">
+        <activity android:name="com.anekvurna.cognichamp.UserChoiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrationActivity">
+        <activity android:name="com.anekvurna.cognichamp.RegistrationActivity">
 
         </activity>
-        <activity android:name=".LogInActivity" />
-        <activity android:name=".ProfileBasicActivity" />
-        <activity android:name=".ProfileAddressActivity" />
-        <activity android:name=".NotificationHistoryActivity" />
-        <activity android:name=".ResetPasswordActivity" />
-        <activity android:name=".DrawerActivity" />
-        <activity android:name=".DriverListActivity" />
-        <activity android:name=".ProfileManualAddressActivity" />
-        <activity android:name=".ViewTabbedActivity"
+        <activity android:name="com.anekvurna.cognichamp.LogInActivity" />
+        <activity android:name="com.anekvurna.cognichamp.ProfileBasicActivity" />
+        <activity android:name="com.anekvurna.cognichamp.ProfileAddressActivity" />
+        <activity android:name="com.anekvurna.cognichamp.NotificationHistoryActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".EmailRegistrationActivity" />
-        <activity android:name=".EmailLogInActivity" />
-        <activity android:name=".MobileVerificationActivity" />
-        <activity android:name=".ForgotPasswordActivity" />
-        <activity android:name=".TrackDriverListActivity"></activity>
+        <activity android:name="com.anekvurna.cognichamp.ResetPasswordActivity" />
+        <activity android:name="com.anekvurna.cognichamp.DrawerActivity" />
+        <activity android:name="com.anekvurna.cognichamp.DriverListActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.anekvurna.cognichamp.ProfileManualAddressActivity" />
+        <activity android:name="com.anekvurna.cognichamp.ViewTabbedActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.anekvurna.cognichamp.EmailRegistrationActivity" />
+        <activity android:name="com.anekvurna.cognichamp.EmailLogInActivity" />
+        <activity android:name="com.anekvurna.cognichamp.MobileVerificationActivity" />
+        <activity android:name="com.anekvurna.cognichamp.ForgotPasswordActivity" />
+        <activity android:name="com.anekvurna.cognichamp.TrackDriverListActivity"/>
     </application>
 
 </manifest>

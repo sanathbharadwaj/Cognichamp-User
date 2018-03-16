@@ -7,6 +7,9 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <include layout="@layout/navigation_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,7 +17,7 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.anekvurna.userapp.MapsActivity" />
+    tools:context="com.anekvurna.cognichamp.MapsActivity" />
 
         <Button
             android:id="@+id/track_driver"
@@ -84,6 +87,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginTop="8dp"
                     android:clickable="true"
+                    android:onClick="callDriver"
                     app:backgroundTint="@android:color/holo_green_dark"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
